@@ -1,4 +1,4 @@
-baseURL = 'https://winterweasel.xyz'
+baseURL = 'https://blog.winterweasel.xyz'
 languageCode = 'ko-kr'
 title = 'winterweasel.xyz'
 theme = 'winterweasel'
