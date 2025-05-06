@@ -1,0 +1,4 @@
+baseURL = 'https://winterweasel.xyz'
+languageCode = 'ko-kr'
+title = 'winterweasel.xyz'
+theme = 'winterweasel'

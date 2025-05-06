@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on winterweasel.xyz</title>
+    <link>https://winterweasel.xyz/posts/</link>
+    <description>Recent content in Posts on winterweasel.xyz</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 06 May 2025 04:38:06 +0900</lastBuildDate>
+    <atom:link href="https://winterweasel.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>새벽 3시에 블로그 만드는 사람</title>
+      <link>https://winterweasel.xyz/posts/%EC%83%88%EB%B2%BD-3%EC%8B%9C%EC%97%90-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%82%AC%EB%9E%8C/</link>
+      <pubDate>Tue, 06 May 2025 04:38:06 +0900</pubDate>
+      <guid>https://winterweasel.xyz/posts/%EC%83%88%EB%B2%BD-3%EC%8B%9C%EC%97%90-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%82%AC%EB%9E%8C/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://winterweasel.xyz/images/8aa4c0112aafe41365ea5cb413715c92.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;안녕하세요. 하얀족제비 입니다.&lt;/p&gt;&#xA;&lt;p&gt;처음엔 그냥 벨로그 같은거 쓸까 생각도 했었는데, 개발자한테는 직접 만들어서 쓰는게 낭만이잖아요?&lt;/p&gt;&#xA;&lt;p&gt;그래서 그냥 hugo + caddy로 간단하게 만들어 봤습니다.&lt;/p&gt;&#xA;&lt;p&gt;호스팅도 맥미니로 간단하게 하고 있습니다. 전기도 얼마 안 먹고 귀찮아서 그냥 안 끄고 있어요.&lt;/p&gt;&#xA;&lt;p&gt;여기에 무엇을 쓸 지는 아직 안 정했습니다. 근데 아마 잡글 올라올 확률이 NaN%일듯&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

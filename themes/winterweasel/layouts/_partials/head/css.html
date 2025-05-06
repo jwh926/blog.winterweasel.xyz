@@ -1,0 +1,2 @@
+{{ $mainCSS := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}" integrity="{{ $mainCSS.Data.Integrity }}">

@@ -1,0 +1,51 @@
+{{ define "main" }}
+  <div class="post-list">
+    {{ range site.RegularPages }}
+    {{ $firstImage := "" }}
+    {{ $matches := findRE `!\[.*?\]\((.*?)\)` .RawContent 1 }}
+    {{ if ge (len $matches) 1 }}
+    {{ $firstImage = index $matches 0 | replaceRE `!\[.*?\]\((.*?)\)` "$1" }}
+    {{ end }}
+  
+    {{ $summaryHtml := .Summary | truncate 120 }} {{/* Store original summary */}}
+    {{ $imageInSummary := false }}
+    {{ $imageTagToRemove := "" }}
+  
+    {{/* Try to find the *exact* img tag in the summary if $firstImage exists */}}
+    {{ with $firstImage }}
+    {{ $absImageUrl := . | absURL }}
+    {{ $relImageUrl := . | relURL }}
+    {{ $imgTagAbs := findRE (printf `<img.*?src=["']?%s["']?.*?>` $absImageUrl) $summaryHtml 1 }}
+    {{ $imgTagRel := findRE (printf `<img.*?src=["']?%s["']?.*?>` $relImageUrl) $summaryHtml 1 }}
+  
+    {{ if $imgTagAbs }}
+    {{ $imageInSummary = true }}
+    {{ $imageTagToRemove = index $imgTagAbs 0 }}
+    {{ else if $imgTagRel }}
+    {{ $imageInSummary = true }}
+    {{ $imageTagToRemove = index $imgTagRel 0 }}
+    {{ end }}
+    {{ end }}
+  
+    <div class="post-card">
+      {{/* Always display the first image on the left if found */}}
+      {{ with $firstImage }}
+      <img src="{{ . | absURL }}" alt="Post image" class="post-card-image">
+      {{ end }}
+  
+      <div class="post-card-content">
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{/* Prepare the final summary, removing the image tag if it was found within */}}
+        {{ $finalSummary := $summaryHtml }}
+        {{ if $imageInSummary }}
+        {{ $finalSummary = replace $summaryHtml $imageTagToRemove "" }}
+        {{ end }}
+        <p>{{ $finalSummary | safeHTML }}</p> {{/* Output potentially modified summary */}}
+        {{ if .Truncated }}
+          <a href="{{ .RelPermalink }}">...</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+{{ end }}
