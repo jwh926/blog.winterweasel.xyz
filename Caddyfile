@@ -1,5 +1,0 @@
-winterweasel.xyz {
-    root * /Users/jwh926/codebase/winterweasel.xyz/public
-    file_server
-    encode zstd gzip
-}
